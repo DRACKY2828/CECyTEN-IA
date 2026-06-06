@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CECyTE IA — Asistente virtual académico para estudiantes de CECyTE Nayarit">
+    <meta name="theme-color" content="#00a651">
+    <title>CECyTE IA — Asistente Académico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fondo decorativo ambiental -->
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-orb ambient-orb--green"></div>
+        <div class="ambient-orb ambient-orb--orange"></div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="app-shell">
+        <div class="app-container">
+
+            <!-- Barra superior -->
+            <header class="app-header">
+                <div class="header-brand">
+                    <div class="brand-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M12 2V5M12 19V22M2 12H5M19 12H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M4.93 4.93L7.05 7.05M16.95 16.95L19.07 19.07M4.93 19.07L7.05 16.95M16.95 7.05L19.07 4.93" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 3"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <h1 class="brand-title">CECyTE IA</h1>
+                        <span class="brand-subtitle">Asistente Académico Institucional</span>
+                    </div>
+                </div>
+                <div class="header-status" role="status" aria-label="Estado del asistente: En línea">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span class="status-label">En línea</span>
+                </div>
+            </header>
+
+            <!-- Área del chat -->
+            <main class="chat-main" role="main">
+                <div
+                    class="chat-container"
+                    id="chatContainer"
+                    role="log"
+                    aria-live="polite"
+                    aria-relevant="additions"
+                    aria-label="Conversación con CECyTE IA"
+                ></div>
+            </main>
+
+            <!-- Entrada de mensajes -->
+            <footer class="input-footer">
+                <form class="input-form" id="messageForm" autocomplete="off" novalidate>
+                    <div class="input-wrapper">
+                        <label for="messageInput" class="visually-hidden">Escribe tu pregunta</label>
+                        <input
+                            type="text"
+                            id="messageInput"
+                            class="message-input"
+                            placeholder="Escribe tu pregunta aquí..."
+                            maxlength="500"
+                            autocomplete="off"
+                            enterkeyhint="send"
+                        >
+                        <button type="submit" class="send-button" id="sendButton" aria-label="Enviar mensaje">
+                            <svg class="send-icon send-icon--idle" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <p class="input-hint">
+                    <span class="hint-dot"></span>
+                    Servicio Social · Prácticas Profesionales · Horarios escolares
+                </p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
